@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+      <title>CHEA | IICHE</title>
+      <meta name="viewport" content="width=device-width" charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="" ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet">
+      <!-- Start Slider HEAD section --> <!-- add to the <head> of your page -->
+      <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}" />
+
+      <!-- End Slider HEAD section -->
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+      <link href="https://fonts.googleapis.com/css?family=Irish+Grover" rel="stylesheet">
+
+
+
+        <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        {# MEDIUM STYLE EDITOR#}
+        <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+
+        {# Custom CSS#}
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        {# Fonts#}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet">
+<body style="background-color:transparent;margin:auto">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">CheA|IIChe</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+          <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Photo Gallery</a></li>
+
+        </ul>
+        </li>
+        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+            <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+            <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+            <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'post_new' %}" >NEW POST</a>
+        </li>
+
+        <li>
+          <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}" >LOG OUT</a>
+        </li>
+
+        <li>
+          <a >WELCOME: {{ user.username }}</a>
+        </li>
+          {% else %}
+          <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+        {% endif %}
+
+      </ul>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <section class="top-container">
+    <div class="left-container-1">
+    <!-- try making it header -->
+      <header class="carousel">
+          <!-- Start Slider BODY section 640*362--> <!-- add to the <body> of your page irish Grover-->
+          <div id="wowslider-container1">
+          <div class="ws_images"><ul>
+          <li><img src="{% static 'images/1.jpeg' %}" alt="1" title="1" id="wows1_0"/></li>
+          <li><img src="{% static 'images/2.jpeg' %}" alt="javascript photo gallery" title="2" id="wows1_1"/></a></li>
+          <li><img src="{% static 'images/3.jpeg' %}" alt="3" title="3" id="wows1_2"/></li>
+          </ul>
+          </div>
+          <div class="ws_bullets">
+          <div>
+          <a href="#" title="1"><span><img src="{% static 'images/1.jpeg' %}" alt="1"/>1</span></a>
+          <a href="#" title="2"><span><img src="{% static 'images/2.jpeg' %}" alt="2"/>2</span></a>
+          <a href="#" title="3"><span><img src="{% static 'images/3.jpeg' %}" alt="3"/>3</span></a>
+          </div>
+          </div>
+          <div class="ws_shadow"></div>
+          </div>
+          <script type="text/javascript" src="{% static 'js/wowslider.js' %}"></script>
+          <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+          <!-- End Slider BODY section -->
+      </header>
+      <section class="lower-box">
+        <div class="blog item">
+          <div><span class="headings ho">Tech Blog</span><span><i class="fab fa-blogger-b fa-4x ho"></i></span></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, fugit.</p>
+        </div>
+        <div class="chem-engg item">
+            <div id="chem-engg"><span class="headings ho" id="chem-engg-heading">What is Chemical Engineering?</span></div>
+            <p class="chem">Chemical engineering occupies a unique position at the interface between molecular sciences and engineering. Intimately linked with the fundamental subjects of chemistry, biology, mathematics, and physics — and... <br> <a href="{% url 'Chemical' %}" style="text-decoration:none;">Read more >></a></p></div>
+        <div class="iiche item">
+            <div><span class="headings ho">IICHE</span><i class="fas fa-user-graduate fa-3x ho"></i></div>
+            <p class="chem">Indian Institute of Chemical Engineers, its an organization which was established years ago to conduct events related to chemical engineering field for chemical engineering undergraduate students, post graduate students and people related to chemical engineering<br> <a href="{% url 'aboutchea'%}" style="text-decoration:none;">Read more >></a></p></div>
+      </section>
+    </div>
+    <div class="right-container-1">
+      <div class="event-heading"><span id="event-heading" class="headings">Events</span><i class="far fa-calendar-alt fa-3x" style="color:white"></i> </div>
+      <div>
+        <p class="eventbox-style">Know Your Branch <span class="dates">25th&nbsp;July</span></p>
+        <p class="eventbox-style">Intern Connect <span class="dates">9th&nbsp;August</span></p>
+        <p class="eventbox-style">Fresher's Event Chemorphous <span class="dates">18th&nbsp;September</span></p>
+        <p class="eventbox-style"> Industrial Tour to Nueland Laboratories <span class="dates">21st&nbsp;October</span></p>
+        <p class="eventbox-style">CFD Workshop <span class="dates">27th&nbsp;October</span></p>
+        <p class="eventbox-style">Chem-o-Philia <span class="dates">31st&nbsp;January</span></p>
+        <p class="eventbox-style">Chem-e-car <span class="dates">20th&nbsp;July</span></p>
+        <p class="eventbox-style">Sports Week <span class="dates">24th&nbsp;March</span></p>
+        <p class="eventbox-style">Elocution and Essay writing <span class="dates">27th&nbsp;February</span></p>
+        <a class="link" href="{% url 'news' %}"style="text-decoration:none;">Read more >></a></div>
+    </div>
+  </section>
+  <section class="bottom-container">
+    <div class="interview item">
+        <div><span class="headings ho">Interview / Intern Talks</span></div>
+      Lorem ipsum dolor sit amet, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga deleniti eos nemo, molestiae illum laboriosam placeat perspiciatis optio modi praesentium. consectetur adipisicing elit. Incidunt odit voluptas reiciendis quaerat doloremque molestias repellat non possimus soluta necessitatibus.</div>
+    <div class="team ri">
+        <div><span class="headings ho">About Us</span><i class="fas fa-users fa-3x ho"></i></div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi!</div>
+  </section>
+  <div class="foot">
+    <p>CHEMICAL ENGINEERING DEPARTMENT</p>
+    <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
+    <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+  </div>
+  <!-- <div class="page">
+    <p>1.</p>
+  </div> -->
+</div>
+{# SCRIPTS#}
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+<script
+src="http://code.jquery.com/jquery-3.1.1.js"
+integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

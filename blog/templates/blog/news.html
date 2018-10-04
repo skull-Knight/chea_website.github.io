@@ -1,0 +1,304 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>News and Events</title>
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">CheA|IIChe</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+              <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Photo Gallery</a></li>
+
+            </ul>
+            </li>
+            <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+                <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+                <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+                <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'post_new' %}" >NEW POST</a>
+            </li>
+
+            <li>
+              <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+            </li>
+            <li>
+              <a href="{% url 'logout' %}" >LOG OUT</a>
+            </li>
+
+            <li>
+              <a >WELCOME: {{ user.username }}</a>
+            </li>
+              {% else %}
+              <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+            {% endif %}
+
+          </ul>
+      </div>
+    </nav>
+    </div>
+    <div class="container">
+      <div class="eve">
+        <h5>[ EVENTS ]</h5>
+      </div>
+      <!-- <div class="row"> -->
+        <!-- <div class="col-xs-12"> -->
+          <div class="year">
+            <h1 class="calendar">2017-2018</h1>
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col-xs-12"> -->
+          <div class="thirdph">
+            <img class="third" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/27066972_1612746022145344_6724365353658699758_n.jpg?_nc_cat=0&oh=4522c5adb7b087b44516f92863667bd6&oe=5BFABC51" alt="">
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col-xs-12"> -->
+          <div class="firstph">
+            <img class="first" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/30705231_1698019640284648_5444646629935799472_n.jpg?_nc_cat=0&oh=a31d0b1fb6bdf6229b4fa6f03d235595&oe=5C35F731" alt="">
+          </div>
+        <!-- </div> -->
+        <!-- <div class="row">
+          <div class="col-xs-12"> -->
+            <div class="secondph">
+              <img class="second" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/30712568_1698019516951327_5084438729955689026_n.jpg?_nc_cat=0&oh=2c42691b096d17c17e890cbf0baf2b03&oe=5BF96E06" alt="">
+            </div>
+          <!-- </div>
+        </div> -->
+          <!-- <div class="row">
+            <div class="col-xs-1"> -->
+              <div class="firstlist">
+                <p class="date">25<sup>th</sup>July,2017</p>
+                <p class="evetname">KNOW YOUR BRANCH</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 2<sup>nd</sup> years</p>
+                <br>
+                <p class="date">26<sup>th</sup>July,2017</p>
+                <p class="evetname">KNOW YOUR BRANCH</p>
+                <p class="subhe">SESSION 2</p>
+                <p class="foryear">For: 2<sup>nd</sup> years</p>
+                <br>
+                <p class="date">27<sup>th</sup>July,2017</p>
+                <p class="evetname">KNOW YOUR BRANCH</p>
+                <p class="subhe">SESSION 3</p>
+                <p class="foryear">For: 2<sup>nd</sup> years</p>
+                <br>
+                <p class="date">28<sup>th</sup>July,2017</p>
+                <p class="evetname">KNOW YOUR BRANCH</p>
+                <p class="subhe">SESSION 4</p>
+                <p class="foryear">For: 2<sup>nd</sup> years</p>
+                <br>
+                <p class="date">9<sup>th</sup>August,2017</p>
+                <p class="evetname">INTERN CONNECT</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 3<sup>rd</sup> years</p>
+                <br>
+                <p class="date">26<sup>th</sup>August,2017</p>
+                <p class="evetname">MOCK GROUP DISCUSSION</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 3<sup>rd</sup> years</p>
+                <br>
+                <p class="date">18<sup>th</sup>September,2017</p>
+                <p class="evetname">FRESHER'S EVENT</p>
+                <p class="subhe">CHEMORPHOUS</p>
+                <p class="foryear">For: 1<sup>st</sup> years</p>
+                <br>
+                <p class="date">19<sup>th</sup>September,2017</p>
+                <p class="evetname">FRESHER'S INTERVIEW</p>
+                <p class="subhe">CHEMORPHOUS 2.0</p>
+                <p class="foryear">For: 1<sup>st</sup> years</p>
+                <br>
+                <p class="date">21<sup>st</sup>September,2017</p>
+                <p class="evetname">THE INNAUGRAL</p>
+                <p class="subhe"></p>
+                <p class="foryear"></p>
+                <br>
+                <p class="date">12<sup>th</sup>October,2017</p>
+                <p class="evetname">INTERN CONNECT</p>
+                <p class="subhe">SESSION 2</p>
+                <p class="foryear">For: 1<sup>st</sup> years</p>
+                <br>
+              </div>
+              <div class="secondlist">
+                <p class="date">13<sup>th</sup>October,2017</p>
+                <p class="evetname">TECHNICAL QUIZ</p>
+                <p class="subhe"></p>
+                <p class="foryear">For: 4<sup>th</sup> years</p>
+                <br>
+                <p class="date">13<sup>th</sup>October,2017</p>
+                <p class="evetname">FINAL YEAR</p>
+                <p class="subhe"></p>
+                <p class="foryear">For: 4<sup>th</sup> years</p>
+                <br>
+                <p class="date">16<sup>th</sup>October,2017</p>
+                <p class="evetname">KNOW YOUR BRANCH</p>
+                <p class="subhe">SESSION 5</p>
+                <p class="foryear">For: 1<sup>st</sup> years</p>
+                <br>
+                <p class="date">29<sup>th</sup>October,2017</p>
+                <p class="evetname">TECHNOZION DEBRIEFING SESSION</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 1<sup>ST</sup> years</p>
+                <br>
+                <p class="date">11<sup>th</sup>November,2017</p>
+                <p class="evetname">SYMPOSIUM</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 3<sup>rd</sup>and 4<sup>th</sup> years</p>
+                <br>
+                <p class="date">5<sup>th</sup>January,2017</p>
+                <p class="evetname">INTERACTIVE SESSION WITH A BARC SCIENTIST</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 1<sup>st</sup> years</p>
+                <br>
+                <p class="date">10<sup>th</sup>January,2017</p>
+                <p class="evetname">QUOTE A TEE COMPETITION </p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">31<sup>st</sup>January,2017</p>
+                <p class="evetname">CHEM-O-PHILIA</p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">27<sup>th</sup>February,2017</p>
+                <p class="evetname">LEARN IN LEGIONS: GROUP DISCUSSION<br>LEARN IN LEGIONS: ELOCUTION<br>LEARN IN LEGIONS: IMPROMPTU IMPOSSIBLE<br>ELOCUTION COMPETITIONL</p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">27<sup>th</sup>February,2017</p>
+                <p class="evetname">ESSAY WRITING COMPETITION</p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years.</p>
+                <br>
+              </div>
+              <div class="thirdlist">
+                <p class="date">28<sup>th</sup>February,2017</p>
+                <p class="evetname">QUIZ COMPETITION</p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">8<sup>th</sup>March,2017</p>
+                <p class="evetname">TECHNICAL QUIZ</p>
+                <p class="subhe">SESSION 2</p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">20<sup>th</sup>March,2017</p>
+                <p class="evetname">PICTION IT</p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years and all branches</p>
+                <br>
+                <p class="date">22<sup>nd</sup>March,2017</p>
+                <p class="evetname">PLACEMENT TALK</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 2<sup>nd</sup> and 3<sup>rd</sup> years</p>
+                <br>
+                <p class="date">21<sup>st</sup>October,2018</p>
+                <p class="evetname">INDUSTRIAL TOUR TO ITC, BHADRACHALAM</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For: 2<sup>nd</sup> years</p>
+                <br>
+                <p class="date">27<sup>th</sup>,28<sup>th</sup>October,2018</p>
+                <p class="evetname">TECHNOZION CFD WORKSHOP</p>
+                <p class="subhe">SESSION 1</p>
+                <p class="foryear">For all years of chemical,mechanical and civil</p>
+                <br>
+                <p class="date"></p>
+                <p class="evetname">INDUSTRIAL TOUR </p>
+                <p class="subhe">SESSION 2</p>
+                <p class="foryear">For 3<sup>rd</sup> years</p>
+                <br>
+                <p class="date">24<sup>th</sup>and 25<sup>th</sup> March,2018</p>
+                <p class="evetname">SPORTS WEEK </p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+                <p class="date">14<sup>th</sup>April,2018</p>
+                <p class="evetname">ChEA AND IIChE VALEDICTORY </p>
+                <p class="subhe"></p>
+                <p class="foryear">For all years</p>
+                <br>
+              </div>
+            <!-- </div> -->
+          <!-- </div>
+      </div> -->
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="foot">
+            <p>CHEMICAL ENGINEERING DEPARTMENT</p>
+            <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
+            <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+          </div>
+          <div class="page">
+            <p>4.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="contain">
+      <div class="leftbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/US_Navy_111011-N-ED900-240_Fire_assessment_members_use_a_naval_firefighting_thermal_imager_%28NFTI%29_in_a_main_engine_room_to_gauge_temperatures_durin.jpg" alt="">
+      </div>
+      <div class="rightbar">
+        <h2>ACCOUNT LOGIN</h2>
+        <h3>(Must be SuperUser, please check admin for issues.)</h3>
+        {% if form.errors %}
+            <p>Your username and password didn't match.Please try again!</p>
+        {% endif %}
+        <form class="form-inline" method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+
+            <div class="form-group">
+              <!-- <input type="text" class="form-control" id="exampleInputName2" placeholder="User Name"> -->
+              
+            </div>
+            <input type="submit" class='btn btn-success btn-lg' value="Login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chea and IIche</title>
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/aboutchea.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">CheA|IIChE</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+            <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Photo Gallery</a></li>
+
+          </ul>
+          </li>
+          <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+              <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+              <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+              <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+          <li>
+            <a href="{% url 'post_new' %}" >NEW POST</a>
+          </li>
+
+          <li>
+            <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+          </li>
+          <li>
+            <a href="{% url 'logout' %}" >LOG OUT</a>
+          </li>
+
+          <li>
+            <a >WELCOME: {{ user.username }}</a>
+          </li>
+            {% else %}
+            <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+          {% endif %}
+
+        </ul>
+    </div>
+  </nav>
+  <div class="leftbar">
+  </div>
+  <div class="rightbar">
+    <div class="articleheading">
+      <h2 class="what">CheA and IIChe</h2>
+    </div>
+    <div class="articlecontent">
+          </div>
+    <p class="con">The <b>Chemical Engineering Association (ChEA)</b>, established in (year), aims at promoting awareness and knowledge about chemical engineering to outside masses as well as provides a forum for mutual interaction to students, faculty, both past and present, of the Department of Chemical Engineering, NIT Warangal. The association ultimately aims at enabling the students and faculty to foster an interactive and intellectual environment.</p>
+    <br><br>
+    <p class="con"><b>IIche Student Chapter:</b></p>
+    <br>
+    <p class="con"><b>IIChE (Indian Institute of chemical engineers)</b> student chapter was formed in (year), to represent department of Chemical engineering, NIT Warangal, at various local and national events held by IIChE. The main aim of the student chapter is to provide students with a platform to showcase their skills and talent at national level.</p>
+    <br><br>
+    <p class="con">ChEA and IIChE together have conducted many events to help students enhance their interpersonal as well as technical skills. These events include Know your branch, Intern Connect, interactive with professors, guest lectures, mock GD sessions and Learn in legion, the first of its kind, helping students to ace in group discussions, interviews in internships and placements.</p>
+    <br><br>
+    <p class="con">Both the associations share a common goal of striving for development of chemical engineering department and student fraternity.</p>
+  </div>
+  <div class="foot">
+    <p>CHEMICAL ENGINEERING DEPARTMENT</p>
+    <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
+    <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+  </div>
+  <div class="page">
+    <p>2.</p>
+  <script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>

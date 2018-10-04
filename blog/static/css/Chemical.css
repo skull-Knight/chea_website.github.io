@@ -1,0 +1,56 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.leftbar{
+  width:35%;
+
+  background-color: rgba(255,255,255,0.8);
+  margin-left: 10px;
+  margin-top: 30px;
+
+  height: 100%;
+}
+.foot{
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.page{
+  font-weight: bolder;
+  float: right;
+  margin-right: 80px;
+  margin-top: -30px;
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 20px;
+}
+.articleheading{
+  margin-top: -20px;
+  background-color:#5f1ba3;
+}
+.con{
+  text-align: justify;
+  margin-left: 6px;
+  margin-right: 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+.what{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+body{
+  background:url('https://upload.wikimedia.org/wikipedia/commons/3/3b/US_Navy_111011-N-ED900-240_Fire_assessment_members_use_a_naval_firefighting_thermal_imager_%28NFTI%29_in_a_main_engine_room_to_gauge_temperatures_durin.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+}

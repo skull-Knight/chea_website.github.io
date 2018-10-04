@@ -1,0 +1,119 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>What is Chemical Engineering?</title>
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/Chemical.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">CheA|IIChe</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+            <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Photo Gallery</a></li>
+
+          </ul>
+          </li>
+        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+              <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+              <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+              <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+          <li>
+            <a href="{% url 'post_new' %}" >NEW POST</a>
+          </li>
+
+          <li>
+            <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+          </li>
+          <li>
+            <a href="{% url 'logout' %}" >LOG OUT</a>
+          </li>
+
+          <li>
+            <a >WELCOME: {{ user.username }}</a>
+          </li>
+            {% else %}
+            <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+          {% endif %}
+
+        </ul>
+    </div>
+  </nav>
+  <div class="leftbar">
+    <div class="articleheading">
+      <h2 class="what">What is Chemical Engineering?</h2>
+    </div>
+    <div class="articlecontent">
+      <p class="con"><strong>Chemical</strong> engineering occupies a unique position at the interface between molecular sciences and engineering.Intimately linked with the fundamental subjects of chemistry, biology, mathematics, and physics — and in close collaboration with fellow engineering disciplines like materials science, computer science, and mechanical, electrical, and civil engineering — chemical engineering offers unparalleled opportunities to do great things.</p>
+      <br><br>
+      <p class="con">Traditionally linked to fuel combustion and energy systems, today’s chemical engineers are spearheading new developments in medicine, biotechnology, microelectronics, advanced materials, energy, consumer products, manufacturing, and environmental solutions. A new generation of chemical engineering-trained entrepreneurs are forming innovative new businesses, no doubt influenced by the fact that chemical engineers have served as CEOs of such leading global businesses as 3M, DuPont, Intel, General Electric, Union Carbide, Dow Chemical, Exxon, BASF, Gulf, and Texaco.</p>
+      <br><br>
+      <p class="con">People with undergraduate and graduate chemical engineering degrees go on to work in industry, academia, consulting, law, medicine, finance, and other fields. For more information, the <a href="http://www.aiche.org/" target="-_blank">American Institute of Chemical Engineers (AIChE) </a>offers an online database that lists the companies that are the most prolific hirers of its members. The <a href = "https://www.aiche.org/community/students/career-resources-k-12-students-parents/what-do-chemical-engineers-do" target = "_blank"
+        >Chemical Engineers in Action</a> site shows the variety of things that chemical engineers can do.</p>
+    </div>
+  </div>
+  <div class="rightbar">
+
+  </div>
+  <div class="foot">
+    <p>CHEMICAL ENGINEERING DEPARTMENT</p>
+    <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
+    <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+  </div>
+  <div class="page">
+    <p>1.</p>
+  </div>
+  <script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>

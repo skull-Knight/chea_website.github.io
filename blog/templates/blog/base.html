@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Chea||IIche</title>
+        <meta name="viewport" content="width=device-width" charset=utf-8">
+      	<meta http-equiv="X-UA-Compatible" content=""ie=edge">
+
+      	<!-- Start Slider HEAD section --> <!-- add to the <head> of your page -->
+
+      	<!-- <script type="text/javascript" src="engine1/jquery.js"></script> -->
+      	<!-- End Slider HEAD section -->
+
+
+        <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        {# MEDIUM STYLE EDITOR#}
+        <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+
+        {# Custom CSS#}
+        <!-- <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}" > -->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        {# Fonts#}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      	<link href="https://fonts.googleapis.com/css?family=Irish+Grover" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet">
+
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">CheA|IIChe</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+          <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Photo Gallery</a></li>
+
+        </ul>
+        </li>
+        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+            <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+            <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+            <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'post_new' %}" >NEW POST</a>
+        </li>
+
+        <li>
+          <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}" >LOG OUT</a>
+        </li>
+
+        <li>
+          <a >WELCOME: {{ user.username }}</a>
+        </li>
+          {% else %}
+          <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+        {% endif %}
+
+      </ul>
+  </div>
+</nav>
+
+<!-- Wrapper Ends -->
+  {# The actual blog posts#}
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                  <div class="blog_posts">
+                    {% block content %}
+                    {% endblock %}
+
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+{# SCRIPTS#}
+<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+<script
+src="http://code.jquery.com/jquery-3.1.1.js"
+integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

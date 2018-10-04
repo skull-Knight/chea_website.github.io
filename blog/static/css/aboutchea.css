@@ -1,0 +1,55 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.rightbar{
+  width:35%;
+  float: right;
+  background-color: rgba(255,255,255,0.8);
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 100%;
+}
+.foot{
+  margin-top: 1200px;
+  text-align: center;
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.page{
+  font-weight: bolder;
+  float: right;
+  margin-right: 80px;
+  margin-top: -30px;
+  color: white;
+  font-family: 'Unica One', cursive;
+  font-size: 20px;
+}
+.articleheading{
+  margin-top: -20px;
+  background-color: rgb(85, 85, 209)
+}
+.con{
+  text-align: justify;
+  margin-left: 6px;
+  margin-right: 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+.what{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+body{
+  background:url('http://s3.amazonaws.com/libapps/customers/2221/images/agap2_technologies-5-1920-1080.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+}
