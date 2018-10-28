@@ -442,14 +442,14 @@ footer p {
 	margin-left: 0;
 	width:20px;
 	height:20px;
-	background: url(./bullet.png) right top;
+	background: url("../images/bullet.png") right top;
 	float: left;
 	text-indent: -4000px;
 	position:relative;
 	color:transparent;
 }
 * html #wowslider-container1 .ws_bullets a {
-	background-image: url(./bullet.gif);
+	background-image: url("../images/bullet.gif");
 }
 #wowslider-container1 .ws_bullets a.ws_selbull{
 	background-position: left top;
@@ -465,11 +465,11 @@ footer p {
 	z-index:60;
 	height: 7.5em;
 	width: 6em;
-	background-image: url(./arrows.png);
+	background-image: url("../images/arrows.png");
 	background-size: 200%;
 }
 * html #wowslider-container1 a.ws_next, * html #wowslider-container1 a.ws_prev{
-	background-image: url(./arrows.gif);
+	background-image: url("../images/arrows.gif");
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 }
 #wowslider-container1 a.ws_next{
@@ -574,7 +574,7 @@ footer p {
 	bottom:-7px;
 	margin-left:-1px;
 	left:43px;
-	background:url(./triangle.png);
+	background:url("../images/triangle.png");
 	width:15px;
 	height:6px;
 }#wowslider-container1 .ws_bulframe div div{

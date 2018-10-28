@@ -109,7 +109,7 @@ def aboutchea(request):
     return render(request, 'blog/aboutchea.html')
 def news(request):
     return render(request, 'blog/news.html')
-# def blog(request):
-#     return render(request, 'blog/blog.html')
+def intern(request):
+    return render(request, 'blog/intern.html')
 def home(request):
     return render(request, 'blog/blog.html')

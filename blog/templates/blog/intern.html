@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Karthik Shathiri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/intern.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Combo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">CheA|IIChe</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+          <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Photo Gallery</a></li>
+
+        </ul>
+        </li>
+        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
+      <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li>
+        <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
+            <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
+            <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
+            <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'post_new' %}" >NEW POST</a>
+        </li>
+
+        <li>
+          <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}" >LOG OUT</a>
+        </li>
+
+        <li>
+          <a >WELCOME: {{ user.username }}</a>
+        </li>
+          {% else %}
+          <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+        {% endif %}
+
+      </ul>
+  </div>
+</nav>
+    <div class="sidebar">
+        <a class="link active" href="#intern-1">Karthik Shathiri</a>
+        <a class="link" href="#intern-2">Lakshmi Kanthi</a>
+        <a class="link" href="#intern-3">Joseph</a>
+        <a class="link" href="#intern-4">Nimisha</a>
+        <a class="link" href="#intern-5">Shreya Reddy</a>
+    </div>
+    <div class="main">
+        <div id="intern-1" class="intern">
+            <div class="name">Karthik Shathiri</div>
+            <div class="about">Internship at MakerSpace</div>
+            <div class="picture">
+                <img src="{% static 'images/karthik.jpg' %}" alt="">
+            </div>
+            <div class="question">Q1. Please give us an introduction about your internship? Where did you do it and how long was the duration?</div>
+
+            <div class="answer">I interned at Bangalore Makerspace for 1.5 months after my first year. It was more of a voluntary intern as I wanted to get exposure. I used to travel to the makerspace every alternate day as the travelling time was close to 3 hours. During the end of intern I mostly did the work from home. </div>
+
+            <div class="question">Q2. What was the application procedure for your internship?</div>
+
+            <div class="answer">As it was a voluntary internship I messaged them on their Facebook page about few openings in their space.</div>
+            <div class="question">Q3. What was your project about?</div>
+
+            <div class="answer">I worked on making a cigarette butt picker. A small robot that goes around the makerspace and identifies the cigarette butts and pick it up. I used Raspberry Pi and Arduino to make this happen. I mostly worked on the software part that recognizes butts from the camera input and identifies the location of the cigarette butt. Then the location is sent to the robot and it collects it. </div>
+
+            <div class="question">Q4. What were the main subjects that you applied during the internship?</div>
+
+            <div class="answer">I didn’t know much about the technologies to be used, even the operating system was not familiar to me previously. But I took it as a challenged and learnt the softwares on the go, and was able to complete that within the time period. The software I used was Linux, Matlab, OpenCV, RaspOS.</div>
+
+            <div class="question">Q5. What were some of the things that took by surprise in the internship?</div>
+
+            <div class="answer">The major challenge during the internship was to develop the problem solving skill. It was the first time I stepped out from home and that too in a city like Bangalore. For the first time I realised the difficulties in a real job like the commute to work which was 2.5 hours, and it was hectic to be stuck in traffic daily for that much time, for the food, initially, I had to search for places to eat. It was not proper like mess where you have fixed timings and location. I got the confidence to live alone, search for work which was the main crux of the internship.</div>
+
+            <div class="question">Q6. What is some advice you’d like to give to the juniors?</div>
+            <div class="answer">Be curious; Google things. Don’t just sit idle during the summers, look for some work that will enhance your personality, every intern is not just about the technical skills, soft skills are equally important.
+                “Take risk and try new things.”</div>
+        </div>
+
+        <div id="intern-2" class="intern">
+            <div class="name">Laksmi Kanthi</div>
+            <div class="about">Internship at Saint Gobain.</div>
+            <div class="picture">
+                <img src="{% static 'images/lakshmi.jpg' %}" alt="">
+            </div>
+            <div class="question">Q1. Where did you do internship? What was the duration?</div>
+            <div class="answer">I did my internship in Saint Gobain (world-class glass manufacturing company) in
+                Sriperumbudur, Chennai. The internship was divided into 2 main divisions, the first phase of internship started from 7th May which was a preliminary training period. It had scheduled web conferences (8 lectures). Some assignments were also assigned to us during this period. The actual internship began from June 1st and continued till July 20th where we were assigned our actual project in plant.</div>
+            <div class="question">Q2. What was the application process for your internship? What were the rounds of selection?</div>
+            <div class="answer">I had applied through college Training and Placement section. There were 3 rounds of selection. First was an online test which consisted of aptitude and technical questions. Aptitude section included questions based on logical, pictorial and verbal interpretation. Technical section consisted of a mix of basic subjects from 1st year, such as BME and BEE. The total duration of test was 1.5 hours.
+                Second round was a group discussion where a case study was given, and total time for group discussion was 15 minutes. Each person in the group was given a set of clues which were needed to solve a mathematical problem. Some peculiar keywords for standard terms were used which made the discussion little complex, but the main aim of the group discussion was to get the clues from everyone and solve the problem.
+                Third round was the personal interview round. The interview consisted of both technical and HR questions. Technical questions were mostly asked related to project/training done like specifications of processes, flowsheet of the process and other technical details.</div>
+            <div class="question">Q3. What were the areas one should focus on during their preparation?</div>
+            <div class="answer">For Aptitude questions one can practice from www.indiabix.com. Aptitude questions are mostly based on logical, pictorial and verbal interpretation. For Group discussion, try to practice mock GDs with your friends and try to develop leadership qualities and fluency in speaking. For Interview, one should be thorough with project/ training done previously. One should come prepared for general HR questions like “Why should we choose you/” and “Why Saint Gobain?” and some similar questions.</div>
+            <div class="question">Q4. What was your project all about? What were the main subjects you applied during your internship?</div>
+            <div class="answer">My project's title was "Post process customer claims". I was deployed in a mirror plant, and
+                I had to reduce damages and defects in mirror post production. The project was more on a managerial side than technical one. No core subjects of chemical engineering were applied in this project. I had to identify potential causes of damage that was happening during packaging, handling and transport of mirrors. I was the team leader, and I had 5-6 people assisting me in my project. The focus was on my approach to problem and a chart which I had to complete as a part of my project. The chart consisted of problem picture, my motto, daily measures, standardization methods, potential and root causes, and control measures. There were team meetings, audit by mentors time to time.</div>
+            <div class="question">Q5. Would you be joining in the same field of work? If yes/ no then why?</div>
+            <div class="answer">Since my project was more on a managerial side than technical, I was not quite interested at that point of time to work in Saint Gobain</div>
+            <div class="question">Q6. How was life there? What were some things that took you by surprise?</div>
+            <div class="answer">Life there was a mix of some good and some bad experiences. It used to be fun to interact with all interns across the country, and we used to enjoy a lot. But communication outside the plant premises was a tough task as people only knew Tamil, however, I tried to manage the situation.
+                We ourselves had to arrange for accommodation but they had conveyance facilities (Air conditioned bus). They also provided us breakfast and lunch. The working hours were from 9 AM to 5 PM.</div>
+            <div class="question">Q7. What are the steps in assessment of a project?</div>
+            <div class="answer">Assignment of project -> Mid review -> Final Review (Power Point Presentation) -> Interviews for Pre-Placement offer (PPO).</div>
+            <div class="question">Q8. What is your advice for 2nd and 3rd years?</div>
+            <div class="answer">Practice aptitude questions as and when possible. This would increase your speed and thinking ability. Keep your concepts clear and try to know about applications of a particular concept. Stay in touch with seniors. They are always there to help and guide you in the best possible way.</div>
+        </div>
+
+        <div id="intern-3" class="intern">
+            <div class="name">Joseph</div>
+            <div class="about">Intership at ITC.</div>
+            <div class="picture">
+                <img src="{% static 'images/joseph.jpg' %}" alt="">
+            </div>
+            <div class="question">Q1. Where did you do your internship and what was the duration? </div>
+            <div class="answer">I did my internship in ITC Bhadrachalam where I got allotted in paper division, and I did it for a duration for 8 weeks. It was 4 hours from here.</div>
+            <div class="question">Q2. What was the application procedure for your internship? </div>
+            <div class="answer">It was through college recruitment – Training and Placement, ITC comes to NITW around August end, and they conducted interviews, and from there they selected 3 people from Chemical Engineering department.</div>
+            <div class="question">Q3. What was some of the preparations you did before joining ITC?</div>
+            <div class="answer">Actually my plan was to go for higher studies, but I spoke with my seniors and they convinced me otherwise. So, I started around 1 week from when the college started. What I focused on was mainly the projects I did in the summer, previous internships, as well has the projects I had done in Technozion. Apart from that I took one favorite subject which was Thermodynamics, and prepared on the basis of that subject</div>
+            <div class="question">Q4. Would you be joining in the same field of work that you have interned in? Why?</div>
+            <div class="answer">Yeah. I have been allotted in the same division that I interned in – paper division. The work in paper division compared to other divisions is more Chemical Engineering - oriented. It is a core job of field.</div>
+            <div class="question">Q5. What were the main subjects that you applied during the internship?</div>
+            <div class="answer">I don’t think I utilized many of the subjects I had learned previously in B.Tech, instead I was required to read several new research papers to gain the information that I needed. My internship was primarily centered around lab works, titrations and experiments. </div>
+            <div class="question">Q6. What were some of the things that took by surprise in the internship?</div>
+            <div class="answer">Basically, the importance of the project which I worked on. When I went there I realized it was the issue of the closure of company that I was dealing with. I was surprised that such an important project was given to me, which ITC Bhadrachalam themselves were trying to solve for 6-7 months. I had to reduce the sodium content by fixed amount.
+                So, according to them the sodium content was in the limit, not exceeding the regulations but we had to reduce it because of safety and precautionary reasons. So rather than removing sodium from the effluent, I proposed that a change in the process would solve the issue. Because they had already tried change in the other areas, this was the only area which we could have changed. So, by adding lesser sodium to the system and making it more efficient; it worked out on a lab scale for me.</div>
+            <div class="question">Q7. What is some advice you’d like to give to the juniors?</div>
+            <div class="answer">First of all, try to keep a good pointer. That matters a lot regardless of what people say. 7.5 above is best, but above 8 is even better. For 2nd years that’s the best thing you can do. First, work on your pointer and forget about internships. And if you have a good pointer then do an event in Technozion, any of the chemical engineering events or try to get a summer internship through contacts. After that study properly for placements. But that doesn’t require much time, only 1 month is needed. Basically, focus on your resume such that you can add stuff in your resume. Don’t leave blanks. Try to work on your co-curricular activities too not just academics.</div>
+        </div>
+
+        <div id="intern-4" class="intern">
+            <div class="name">Nimisha</div>
+            <div class="about">Intership at HPCL.</div>
+            <div class="picture">
+                <img src="{% static 'images/nimisha.jpg' %}" alt="">
+            </div>
+            <div class="question">Q1. Please give us an introduction about your internship? Where did you do it and how long was the duration? </div>
+            <div class="answer">I have done this internship for 1 month. I got this internship with HPCL - Vizag through a known an associate of my father. For the first few days the whole plant, the working of it etc. We requested for doing a project in the plant. Then we were given MS Blending, it means motor spirit blending. So this gasoline blend is made by blending 5 streams. Each stream has to have a particular amount of quantity and will be blended in a tank. The flowrates of each stream varies depending on our specifications. Right now they are using BS -4 and because they were shifting to BS – 6 to reduce the emissions, so based on those requirements I did a project on MS Blending.</div>
+            <div class="question">Q2. What was the application procedure for this internship? </div>
+            <div class="answer">If you have a known person who’s already working in HPCL then you can directly apply. You need a permission letter for internship from the department. For me Ramsagar sir had certified it last year. Then they will pass this on to the HR head and they will return to you with a confirmation letter. </div>
+            <div class="question">Q3. What were some of the preparations you did joining HPCL?</div>
+            <div class="answer">It would be better in general to have some idea on PRPC. (HPCL is a petroleum country). But when doing this project they asked about information RON values and some other specifications which need to be met. So that each of the method or property of each oil was required. So they had asked us to learn and prepare on these topics.</div>
+            <div class="question">Q4. Will you be joining in this same field/industry in the future?</div>
+            <div class="answer">Right now, I have interest in this field. So I want to join HPCL after writing GATE.  </div>
+            <div class="question">Q5. What were some of the subjects that you applied during this internship? </div>
+            <div class="answer">Actually it was PDC – Process Dynamic and Control and FPM concepts. This was because when you are shipping the raw materials through pipes you will have to apply FPM concepts. Other than PRPC.</div>
+            <div class="question">Q6. What was something that surprised you during your internship period? Technical or otherwise? </div>
+            <div class="answer">One thing that surprised me was from the outside when you saw the industry it looked very small but upon going inside it was very vast! Several units, some congested. Like when we read in PRPC it will be very small in theory but much, much larger in real life and consists of several unit operations.</div>
+            <div class="question">Q7. What is some advice you’d like to give to your juniors? </div>
+            <div class="answer">Definitely, it is useful to get an internship. You will gain experience and interest in the subjects, as well as working in an industry. A good CGPA, in my opinion, outside of campus is not required, only interest is needed. However if they have contacts in their required field of work they can definitely apply and get internship.</div>
+        </div>
+
+        <div id="intern-5" class="intern">
+            <div class="name">Shreya Reddy</div>
+            <div class="about">Internship at Reliance.</div>
+            <div class="picture">
+                <img src="{% static 'images/shreya.jpg' %}" alt="">
+            </div>
+
+            <div class="question">Q1. Where did you do internship? What was the duration?</div>
+            <div class="answer">I did my internship in Reliance petrochemicals limited (Hazira manufacturing division),
+                Surat Gujarat. The duration of the internship was for 2 months from 7th May to 7th July 2018.</div>
+            <div class="question">Q2. What was the application process for your internship? What were the rounds of selection?</div>
+            <div class="answer">I had applied through college Training and Placement section. The first round was an online test which consisted of 2 sections Aptitude and Technical. Aptitude section had 30 questions each carrying 2 marks, these 30 questions were to be answered in 30 minutes. Technical section had 30 questions each carrying 1 mark, these 30 questions were to be answered in 30 minutes. The candidates shortlisted on basis of online test were selected as interns.</div>
+            <div class="question">Q3. What were the areas one should focus on while preparation?</div>
+            <div class="answer">For aptitude one can practice questions from www.indiabix.com. Aptitude questions generally include work and time problems, series of numbers and some vocabulary related questions. For technical section one should focus on areas of mass transfer (more weightage), heat transfer and fluid mechanics (dimensionless numbers).</div>
+            <div class="question">Q4. Would you be joining in the same field of work? If yes/no then why?</div>
+            <div class="answer">I would try to get a job in petrochemical company as it allows a chemical engineer to apply all principles learnt, but if some other opportunities come in like FMCG companies or pharma industries, I would take up that opportunity.</div>
+            <div class="question">Q5. What was your project all about? What were the main subjects you applied during your internship?</div>
+            <div class="answer">My project was to reduce steam condensate losses, work on steam condensate recovery to minimize losses. I had to apply principles of mass balance, heat transfer, thermodynamics, and mass transfer to work on the project. My mentors as well as co-workers helped me in technical aspects as and when needed.</div>
+            <div class="question">Q6. How was life there? What were there some things that took you by surprise?</div>
+            <div class="answer">Life there was quite good. My working hours were from 9 am to 5:30 pm. There were 6 working days, and they provided us with all basic amenities such as lodging and transport, except food. The mentors were very helpful, and the work was stress free.
+                My overall project experience was very nice. There were no ups and downs, everything went on smoothly and I was able to complete my report in time.</div>
+            <div class="question">Q7. What is your advice for 2nd and 3rd years?</div>
+            <div class="answer">Practice aptitude questions as and when possible. This would increase your speed and thinking ability. Keep your concepts clear, and try to know about applications of a particular concept. Getting an internship is not as tough as it seems. Keep practicing aptitude questions and try to give your best.</div>
+        </div>
+    </div>
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

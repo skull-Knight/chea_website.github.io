@@ -70,16 +70,7 @@
         </ul>
         </li>
         <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNSHIPS & PLACEMENTS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li>
         <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
@@ -145,7 +136,7 @@
       <section class="lower-box">
         <div class="blog item">
           <div><span class="headings ho">Tech Blog</span><span><i class="fab fa-blogger-b fa-4x ho"></i></span></div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, fugit.</p>
+          <p class="chem">Blog series which addresses intriguing topics of chemical engineering. Blogs are contributed by the students, faculty and alumni of chemical engineering department.<br><a class="link" href="{% url 'post_list' %}"style="text-decoration:none;">Read more >></a></p>
         </div>
         <div class="chem-engg item">
             <div id="chem-engg"><span class="headings ho" id="chem-engg-heading">What is Chemical Engineering?</span></div>
@@ -173,10 +164,10 @@
   <section class="bottom-container">
     <div class="interview item">
         <div><span class="headings ho">Interview / Intern Talks</span></div>
-      Lorem ipsum dolor sit amet, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga deleniti eos nemo, molestiae illum laboriosam placeat perspiciatis optio modi praesentium. consectetur adipisicing elit. Incidunt odit voluptas reiciendis quaerat doloremque molestias repellat non possimus soluta necessitatibus.</div>
+    <p class="chem">Interviews of students who have pursued internships at various reputed industries and universities around the globe.<br><a class="link" href="{% url 'intern' %}"style="text-decoration:none;">Read more >></a></p></div>
     <div class="team ri">
         <div><span class="headings ho">About Us</span><i class="fas fa-users fa-3x ho"></i></div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi!</div>
+      <p class="chem">ChEA and IIChE student chapters are student-faculty bodies that thrive to inculcate learning culture among peers and represent the department at a national and global level.<br><a class="link" target="_blank" href="{% url 'team' %}"style="text-decoration:none;">Read more >></a></p></div>
   </section>
   <div class="foot">
     <p>CHEMICAL ENGINEERING DEPARTMENT</p>

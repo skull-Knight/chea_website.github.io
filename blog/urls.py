@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^Chemical/$', views.Chemical, name='Chemical'),
     url(r'^aboutchea/$', views.aboutchea, name='aboutchea'),
     url(r'^news/$', views.news, name='news'),
-    # url(r'^blog/$', views.blog, name='blog'),
+    url(r'^intern/$', views.intern, name='intern'),
 ]
