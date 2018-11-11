@@ -52,9 +52,9 @@ var revert3 = function(){
 }
 var change4 = function(){
   $('.box4 .el').css("opacity", "0.0");
-  $('.box4').css("background", "url(https://raw.githubusercontent.com/abish97/chea_website/master/blog/static/images/6.jpeg)");
+  $('.box4').css("background", "url(https://raw.githubusercontent.com/abish97/chea/master/12.jpg)");
   $('.box4 .number').css("opacity", "0.0");
-  $('.box4').css("background-repeat","no-repeat")
+  // $('.box4').css("background-repeat","no-repeat")
   $('.box4 .name').css("color", "white");
   $('.box4 .position').css("color", "white");
   $('i').css("opacity", "1.0");
@@ -63,8 +63,8 @@ var revert4 = function(){
   $('.box4 .el').css("opacity", "1.0");
   $('.box4').css("background", "none");
   $('.box4 .number').css("opacity", "1.0");
-  $('.box4').css("background", "url(https://raw.githubusercontent.com/abish97/chea_website/master/blog/static/images/6.jpeg)");
-  $('.box4').css("opacity","0.3");
+  // $('.box4').css("background", "url(https://raw.githubusercontent.com/abish97/chea_website/master/blog/static/images/6.jpeg)");
+  // $('.box4').css("opacity","0.3");
   $('.box4 .name').css("color", "black");
   $('.box4 .position').css("color", "black");
 }

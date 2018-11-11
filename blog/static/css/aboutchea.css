@@ -11,12 +11,12 @@
   height: 100%;
 }
 .foot{
-  margin-top: 1200px;
+  margin-top: 1400px;
   text-align: center;
   color: white;
-  font-family: 'Unica One', cursive;
-  font-size: 20px;
-  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
 }
 .page{
   font-weight: bolder;
@@ -24,7 +24,7 @@
   margin-right: 80px;
   margin-top: -30px;
   color: white;
-  font-family: 'Unica One', cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 .articleheading{
@@ -35,7 +35,7 @@
   text-align: justify;
   margin-left: 6px;
   margin-right: 4px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 .what{
@@ -43,7 +43,7 @@
   padding-bottom: 20px;
   text-align: center;
   color: white;
-  font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', cursive;
   font-size: 50px;
 }
 body{

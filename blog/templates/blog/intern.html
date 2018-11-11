@@ -8,13 +8,15 @@
     <title>Karthik Shathiri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/intern.css' %}" />
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/news.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Combo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
@@ -23,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> -->
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -35,7 +37,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">CheA|IIChe</a>
+        <a class="navbar-brand" href="/">
+          ChEA|IIChE
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -44,21 +48,21 @@
         <ul class="dropdown-menu">
           <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
           <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Photo Gallery</a></li>
+          <!-- <li role="separator" class="divider"></li> -->
+          <!-- <li><a href="#">Photo Gallery</a></li> -->
 
         </ul>
         </li>
-        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
-      <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li>
+        <li><a href="{% url 'news' %}">EVENTS</a></li>
+      <!-- <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li> -->
         <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
-            <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
-            <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
-            <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+            <li><a href="{% url 'cheateam17' %}" target="_blank">2017-18</a></li>
+            <li><a href="{% url 'team' %}" target="_blank">2018-19</a></li>
+            <!-- <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li> -->
+            <!-- <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li> -->
           </ul>
         </li>
       </ul>

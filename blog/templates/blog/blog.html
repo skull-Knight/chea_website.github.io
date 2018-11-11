@@ -2,10 +2,10 @@
 {% load staticfiles %}
 <html>
     <head>
-      <title>CHEA | IICHE</title>
+      <title>ChEA|IIChE</title>
       <meta name="viewport" content="width=device-width" charset=utf-8">
       <meta http-equiv="X-UA-Compatible" content="" ie=edge">
-      <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet">
+
       <!-- Start Slider HEAD section --> <!-- add to the <head> of your page -->
       <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}" />
 
@@ -13,7 +13,8 @@
 
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-      <link href="https://fonts.googleapis.com/css?family=Irish+Grover" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 
 
 
@@ -34,16 +35,16 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
         {# Fonts#}
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-      	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet">
+      	<!-- <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overlock+SC" rel="stylesheet"> -->
 <body style="background-color:transparent;margin:auto">
 
   <nav class="navbar navbar-default">
@@ -55,7 +56,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">CheA|IIChe</a>
+        <a class="navbar-brand" href="/">
+          ChEA|IIChE
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -64,21 +67,22 @@
         <ul class="dropdown-menu">
           <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
           <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Photo Gallery</a></li>
+          <!-- <li role="separator" class="divider"></li> -->
+          <!-- <li><a href="#">Photo Gallery</a></li> -->
 
         </ul>
         </li>
-        <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
-        <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li>
+        <li><a href="{% url 'news' %}">EVENTS</a></li>
+        <!-- <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li> -->
         <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+        <!-- <li><a href="{% url ''}"</li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
-            <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
-            <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
-            <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+            <li><a href="{% url 'cheateam17' %}" target="_blank">2017-18</a></li>
+            <li><a href="{% url 'team' %}" target="_blank">2018-19</a></li>
+            <!-- <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li> -->
+            <!-- <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li> -->
           </ul>
         </li>
       </ul>
@@ -170,9 +174,9 @@
       <p class="chem">ChEA and IIChE student chapters are student-faculty bodies that thrive to inculcate learning culture among peers and represent the department at a national and global level.<br><a class="link" target="_blank" href="{% url 'team' %}"style="text-decoration:none;">Read more >></a></p></div>
   </section>
   <div class="foot">
-    <p>CHEMICAL ENGINEERING DEPARTMENT</p>
-    <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
-    <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+    <p>Chemical Engineering Department</p>
+    <p>National Institute of Technology, Warangal</p>
+    <p>&copy;&ensp;Kumar Abhishek & Shreyans Jain</p>
   </div>
   <!-- <div class="page">
     <p>1.</p>

@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'css/aboutchea.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css'%}">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -25,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">CheA|IIChE</a>
+          <a class="navbar-brand" href="/">ChEA|IIChE</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
@@ -34,21 +37,21 @@
           <ul class="dropdown-menu">
             <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
             <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Photo Gallery</a></li>
+            <!-- <li role="separator" class="divider"></li> -->
+            <!-- <li><a href="#">Photo Gallery</a></li> -->
 
           </ul>
           </li>
-          <li><a href="{% url 'news' %}">NEWS & EVENTS</a></li>
-          <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li>
+          <li><a href="{% url 'news' %}">EVENTS</a></li>
+          <!-- <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li> -->
           <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="{% url 'team' %}" target="_blank">Chea 18-19</a></li>
-              <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li>
-              <li><a href="{% url 'cheateam17' %}" target="_blank">Chea 17-18</a></li>
-              <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li>
+              <li><a href="{% url 'cheateam17' %}" target="_blank">2017-18</a></li>
+              <li><a href="{% url 'team' %}" target="_blank">2018-19</a></li>
+              <!-- <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li> -->
+              <!-- <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li> -->
             </ul>
           </li>
         </ul>
@@ -95,12 +98,11 @@
     <p class="con">Both the associations share a common goal of striving for development of chemical engineering department and student fraternity.</p>
   </div>
   <div class="foot">
-    <p>CHEMICAL ENGINEERING DEPARTMENT</p>
-    <p>NATIONAL INSTITUTE OF TECHNOLOGY,WARANGAL</p>
-    <p>&copy;&ensp;Kumar Abhishek & Shreyansh</p>
+    <p>Chemical Engineering Department</p>
+    <p>National Institute of Technology, Warangal</p>
+    <p>&copy;&ensp;Kumar Abhishek & Shreyans Jain</p>
   </div>
   <div class="page">
-    <p>2.</p>
   <script
   src="http://code.jquery.com/jquery-3.1.1.js"
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="

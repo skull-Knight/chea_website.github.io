@@ -105,7 +105,7 @@ a{
   float: left;
   width: 200px;
   height: 200px;
-  text-shadow: 2px 2px 5px red;
+  /* text-shadow: 2px 2px 5px red; */
   border: 1px solid white;
   margin-left:-600px;
   margin-top: 550px;
@@ -305,9 +305,8 @@ a{
   text-align: center;
   color: #a6b1c1;
   font-family: 'Unica One', cursive;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 290px;
-  font-weight: bolder;
 }
 .page{
   font-weight: bolder;

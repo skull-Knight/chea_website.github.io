@@ -54,12 +54,12 @@
 }
 .foot{
   margin-top: 300px;
-  margin-left: 200px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   color: #b0b0ba;
-  font-family: 'Unica One', cursive;
-  font-size: 20px;
-  font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 .page{
   font-weight: bolder;
@@ -71,17 +71,20 @@
   font-size: 20px;
 }
 .third{
+  border: 2px solid  black;
   width:400px;
   height: 250px;
 
 }
 .second{
+  border: 2px solid  black;
   width: 283px;
   height: 340px;
 }
 .first{
+  border: 2px solid  black;
   width:300px;
-  height: 500px;
+  height: 250px;
 }
 .thirdlist{
   position: absolute;
@@ -103,15 +106,16 @@ padding-left: -1600px;
 }
 .navbar-default .navbar-brand {
   font-size:40px;
-  color:#e2c97c;
-  font-family: 'Orbitron', sans-serif;
+  color:#bb7ebc;
+  font-weight: lighter;
+  font-family: 'Lato', sans-serif;
   float: left;
   margin-left: 17px;
   padding-left: 23px;
+  transition: ease-in-out 0.3s;
 }
 .navbar-default .navbar-brand:hover{
-  transform: scale(1.2);
-  color: #e2c97c;
+  transform: scale(1.02);
 }
 .navbar-default .navbar-nav > li > a {
     font-size: 16px;
@@ -157,7 +161,7 @@ padding-left: -1600px;
 .navbar-default .navbar-nav .open .dropdown-menu>li>a{
   color: black;
   font-family: 'Mirza', cursive;
-  font-size: 20px;
+  font-size: 18px;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
   color:#18cee2;
