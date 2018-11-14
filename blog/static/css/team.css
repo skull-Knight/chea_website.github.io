@@ -54,7 +54,27 @@ a{
   font-size: 16px;
   letter-spacing: 5px;
 }
-
+.header3{
+  position: absolute;
+  margin-top: 2640px;
+  margin-left: 700px;
+  font-size:40px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.header1{
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 700px;
+  font-size:40px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.header2{
+  position: absolute;
+  margin-top: 700px;
+  margin-left: 700px;
+  font-size:40px;
+  font-family: 'Julius Sans One', sans-serif;
+}
 .box1{
   position: relative;
   display: inline-block;
@@ -63,7 +83,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left: 750px;
-  margin-top: 60px;
+  margin-top: 860px;
   text-shadow: 2px 2px 5px blue;
 }
 .box2{
@@ -74,7 +94,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-560px;
-  margin-top: 300px;
+  margin-top: 1100px;
   text-shadow: 2px 2px 5px red;
 }
 .box3{
@@ -86,7 +106,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-200px;
-  margin-top: 300px;
+  margin-top: 1100px;
 }
 .box4{
   position: absolute;
@@ -97,7 +117,7 @@ a{
   text-shadow: 2px 2px 5px green;
   border: 1px solid white;
   margin-left:190px;
-  margin-top: 300px;
+  margin-top: 1100px;
 }
 .box5{
   position: absolute;
@@ -108,7 +128,7 @@ a{
   /* text-shadow: 2px 2px 5px red; */
   border: 1px solid white;
   margin-left:-600px;
-  margin-top: 550px;
+  margin-top: 1350px;
   text-shadow: 2px 2px 5px blue;
 }
 .box6{
@@ -120,7 +140,7 @@ a{
   text-shadow: 2px 2px 5px green;
   border: 1px solid white;
   margin-left:-330px;
-  margin-top: 550px;
+  margin-top: 1350px;
 }
 .box7{
   position: absolute;
@@ -131,7 +151,7 @@ a{
   border: 1px solid white;
   margin-left:-60px;
   text-shadow: 2px 2px 5px blue;
-  margin-top: 550px;
+  margin-top: 1350px;
 }
 .box8{
   position: absolute;
@@ -142,7 +162,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:190px;
-  margin-top: 550px;
+  margin-top: 1350px;
 }
 .box9{
   position: absolute;
@@ -153,7 +173,7 @@ a{
   text-shadow: 2px 2px 5px green;
   border: 1px solid white;
   margin-left:-600px;
-  margin-top: 800px;
+  margin-top: 1600px;
 }
 .box10{
   position: absolute;
@@ -164,7 +184,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-330px;
-  margin-top: 800px;
+  margin-top: 1600px;
 }
 .box11{
   position: absolute;
@@ -174,7 +194,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-60px;
-  margin-top: 800px;
+  margin-top: 1600px;
   text-shadow: 2px 2px 5px blue;
 }
 .box12{
@@ -186,7 +206,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:190px;
-  margin-top: 800px;
+  margin-top: 1600px;
 }
 .box13{
   position: absolute;
@@ -197,7 +217,7 @@ a{
   text-shadow: 2px 2px 5px blue;
   border: 1px solid white;
   margin-left:-600px;
-  margin-top: 1050px;
+  margin-top: 1850px;
 }
 .box14{
   position: absolute;
@@ -208,7 +228,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-330px;
-  margin-top: 1050px;
+  margin-top: 1850px;
 }
 .box15{
   position: absolute;
@@ -219,7 +239,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-60px;
-  margin-top: 1050px;
+  margin-top: 1850px;
 }
 .box16{
   position: absolute;
@@ -230,7 +250,7 @@ a{
   text-shadow: 2px 2px 5px blue;
   border: 1px solid white;
   margin-left:190px;
-  margin-top: 1050px;
+  margin-top: 1850px;
 }
 .box17{
   position: absolute;
@@ -241,7 +261,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-600px;
-  margin-top: 1300px;
+  margin-top: 2100px;
 }
 .box18{
   position: absolute;
@@ -252,7 +272,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-330px;
-  margin-top: 1300px;
+  margin-top: 2100px;
 }
 .box19{
   position: absolute;
@@ -263,7 +283,7 @@ a{
   height: 200px;
   border: 1px solid white;
   margin-left:-60px;
-  margin-top: 1300px;
+  margin-top: 2100px;
 }
 .box20{
   position: absolute;
@@ -274,7 +294,117 @@ a{
   text-shadow: 2px 2px 5px red;
   border: 1px solid white;
   margin-left:190px;
-  margin-top: 1300px;
+  margin-top: 2100px;
+}
+.box21{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px blue;
+  border: 1px solid white;
+  margin-left:-200px;
+  margin-top: 2350px;
+}
+.box22{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px red;
+  border: 1px solid white;
+  margin-left:-200px;
+  margin-top: 2760px;
+}
+.box23{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px blue;
+  border: 1px solid white;
+  margin-left:-560px;
+  margin-top: 3010px;
+}
+.box24{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px green;
+  border: 1px solid white;
+  margin-left:-200px;
+  margin-top: 3010px;
+}
+.box25{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px red;
+  border: 1px solid white;
+  margin-left:190px;
+  margin-top: 3010px;
+}
+.box26{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px blue;
+  border: 1px solid white;
+  margin-left:-360px;
+  margin-top: 3260px;
+}
+.box27{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px red;
+  border: 1px solid white;
+  margin-left:10px;
+  margin-top: 3260px;
+}
+.box28{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px red;
+  border: 1px solid white;
+  margin-left:750px;
+  margin-top: 160px;
+}
+.box29{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px blue;
+  border: 1px solid white;
+  margin-left:400px;
+  margin-top: 410px;
+}
+.box30{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  text-shadow: 2px 2px 5px green;
+  border: 1px solid white;
+  margin-left:1100px;
+  margin-top: 410px;
 }
 .number{
   float: right;
@@ -301,7 +431,7 @@ a{
   color: white;
 }
 .foot{
-  margin-top: 1700px;
+  margin-top: 3500px;
   text-align: center;
   color: #a6b1c1;
   font-family: 'Unica One', cursive;

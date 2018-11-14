@@ -113,3 +113,15 @@ def intern(request):
     return render(request, 'blog/intern.html')
 def home(request):
     return render(request, 'blog/blog.html')
+def quote(request):
+    return render(request, 'blog/quote.html')
+def placement(request):
+    return render(request, 'blog/placement.html')
+def philia(request):
+    return render(request, 'blog/philia.html')
+def quiz(request):
+    return render(request, 'blog/quiz.html')
+def piction(request):
+    return render(request, 'blog/piction.html')
+def sports(request):
+    return render(request, 'blog/sports.html')  

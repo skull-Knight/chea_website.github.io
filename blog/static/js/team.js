@@ -1,7 +1,5 @@
 var change1 = function(){
   $('.box1 .el').css("opacity", "0.0");
-
-
   $('.box1').css("background", "url(https://raw.githubusercontent.com/abish97/chea/master/12.jpg)");
   $('.box1 .number').css("opacity", "0.0");
   $('.box1 .name').css("color", "white");

@@ -24,4 +24,10 @@ urlpatterns = [
     url(r'^aboutchea/$', views.aboutchea, name='aboutchea'),
     url(r'^news/$', views.news, name='news'),
     url(r'^intern/$', views.intern, name='intern'),
+    url(r'^quote/$', views.quote, name='quote'),
+    url(r'^placement/$', views.placement, name='placement'),
+    url(r'^philia/$', views.philia, name='philia'),
+    url(r'^quiz/$', views.quiz, name='quiz'),
+    url(r'^piction/$', views.piction, name='piction'),
+    url(r'^sports/$', views.sports, name='sports'),
 ]

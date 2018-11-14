@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Piction It</title>
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href= "{%static 'css/placement.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+              ChEA|IIChE
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'Chemical' %}">What is Chemical Engineering?</a></li>
+              <li><a href="{% url 'aboutchea'%}">What is Chea and IIche?</a></li>
+              <!-- <li role="separator" class="divider"></li> -->
+              <!-- <li><a href="#">Photo Gallery</a></li> -->
+
+            </ul>
+            </li>
+            <li><a href="{% url 'news' %}">EVENTS</a></li>
+          <!-- <li><a href="{% url 'intern' %}">INTERNSHIPS AND PLACEMENTS</a></li> -->
+            <li><a href="{% url 'post_list' %}">TECH BLOG</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TEAM<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'cheateam17' %}" target="_blank">2017-18</a></li>
+                <li><a href="{% url 'team' %}" target="_blank">2018-19</a></li>
+                <!-- <li><a href="{% url 'iicheteam' %}" target="_blank">IIche 18-19</a></li> -->
+
+                <!-- <li><a href="{% url 'iicheteam17' %}" target="_blank">IIche 17-18</a></li> -->
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'post_new' %}" >NEW POST</a>
+            </li>
+
+            <li>
+              <a href="{% url 'post_draft_list' %}">DRAFTS</a>
+            </li>
+            <li>
+              <a href="{% url 'logout' %}" >LOG OUT</a>
+            </li>
+
+            <li>
+              <a >WELCOME: {{ user.username }}</a>
+            </li>
+              {% else %}
+              <!-- <li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="glyphicon glyphicon-user"></span></a></li> -->
+            {% endif %}
+
+          </ul>
+      </div>
+    </nav>
+    </div>
+    <div class="year">
+      <h1 class="calendar">Piction It</h1>
+    </div>
+    <div class="image">
+      <img class="imgs" src="{%static 'images/piction.JPG'%}" alt="image">
+    </div>
+    <div class="content">
+      <p class="contentin">Piction-it is first event of its kind conducted by ChEA and IIChE and was open for all branches.  The event started at 6PM at DSH on 20th March. The event had 3 rounds, first being a mass elimination round. In the first round the teams were challenged to guess the word/phrase from the pictures shown on the screen. Out of 25 teams participated, top 8 teams were promoted to further round. In round 2, the two members of each team played Pictionary, where one has to randomly select a chit and draw the word/phrase written in the chit on the board while the other person has to guess the word/phrase.                                                              Out of 8 teams, top 2 teams headed to the final round. The final gripping round was also a Pictionary round but with a twist. There were chits sorted out in to categories that are, movies, objects, people and countries. Both the had to select the same chit then draw and guess the word similar to 2nd round, but in this round the team members had to alternate between drawing and guessing for each turn.
+      <br><br>
+      Winners:<br>
+      Varun ( B.Tech 3/4, Chemical)<br>
+      Mayank ( B.Tech  3/4, Chemical )<br>
+      Runner ups:<br>
+      Aakashdeep (B. Tech 2/4, MME)<br>
+      Baidurjya (B. Tech 2/4, ECE)<br>
+
+</p>
+    </div>
+    <div class="foot">
+      <p>Chemical Engineering Department</p>
+      <p>National Institute of Technology, Warangal</p>
+      <p>&copy;&ensp;Kumar Abhishek & Shreyans Jain</p>
+    </div>
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
