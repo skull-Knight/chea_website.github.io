@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chea 17-18</title>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+    <link rel="shortcut icon" href="{%static 'images/icon.ico' %}" >
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="back">
+      <div class="rightbar">
+        <br><br><br><br><br>
+          <p class="content">"Individual commitment to a<br>&ensp;group effort--that is what makes a team <br>&ensp;work, <br>&ensp;a company work, a society work, a <br>&ensp;civilization work."<br>&emsp;&emsp;<span class="name">--Vince Lombardi</span></p>
+          <ul class="link">
+          <!-- <div class="lis">
+            <li><a href="{% url 'iicheteam' %}">IIche Team 18-19</a></li>
+          </div> -->
+          <div class="lis">
+            <li><a href="{% url 'cheateam17' %}">Team 17-18</a></li>
+          </div>
+          <!-- <div class="lis">
+              <li><a href="{% url 'iicheteam17' %}">IIche Team 17-18</a></li>
+          </div> -->
+
+          </ul>
+      </div>
+      <div class="heading">
+        <h2 class="main">Elem<br>&ensp;ents<span class="sub">TEAM</span></h2>
+      </div><br><br><br>
+      <div class="header1">
+        <h2>Professors</h2>
+      </div>
+      <div class="box28" onmouseover="change28()" onmouseout="revert28()">
+        <p class="number">1</p>
+        <p class="el">Sb</p>
+        <a href="mailto:sarat@nitw.ac.in"><p class="name">Dr. Sarath Babu Anne<br><span class="position">HOD|Chemical</span></p></a>
+      </div>
+      <div class="box29" onmouseover="change29()" onmouseout="revert29()">
+        <p class="number">2</p>
+        <p class="el">Ts</p>
+        <a href="mailto:sunil76@student.nitw.ac.in"><p class="name">Dr. T Sunil Kumar<br><span class="position">Associate Professor|Chemical</span></p></a>
+      </div>
+      <div class="box30" onmouseover="change30()" onmouseout="revert30()">
+        <p class="number">3</p>
+        <p class="el">Ps</p>
+        <a href="mailto:pvsuresh@student.nitw.ac.in"><p class="name">Dr. P.V. Suresh<br><span class="position">Associate Professor|Chemical</span></p></a>
+      </div>
+      <div class="header2">
+        <h2>Chea Team</h2>
+      </div>
+      <div class="box1" onmouseover="change1()" onmouseout="revert1()">
+        <p class="number">1</p>
+        <p class="el">Ka</p>
+        <a href="mailto:mailto:skarthik1@student.nitw.ac.in"><p class="name">S.Karthik<br><span class="position">Secretary|CheA</span></p></a>
+      </div>
+      <div class="box2" onmouseover="change2()" onmouseout="revert2()">
+        <p class="number">2</p>
+        <a href="mailto:"></a>
+        <p class="el">Ak</p>
+        <p class="name">Aditya Kumar<br><span class="position">Additional Secretary|CheA</span></p>
+      </div>
+      <div class="box3" onmouseover="change3()" onmouseout="revert3()">
+        <p class="number">3</p>
+        <a href="mailto:"></a>
+        <p class="el">Vp</p>
+        <p class="name">Ved Prakash<br><span class="position">Additional Secretary|CheA</span></p>
+      </div>
+      <div class="box4" onmouseover="change4()" onmouseout="revert4()">
+        <p class="number">4</p>
+        <a href="mailto:"></a>
+        <p class="el">Sg</p>
+        <p class="name">Sripadh Gupta<br><span class="position">Additional Secretary|CheA</span></p>
+      </div>
+      <div class="box5" onmouseover="change5()" onmouseout="revert5()">
+        <p class="number">5</p>
+        <a href="mailto:"></a>
+          <p class="el">Sk</p>
+        <a href="mailto:svenkatakarthik@student.nitw.ac.in"><p class="name">Sv. Karthik<br><span class="position">Joint Secretary|CheA</span></p></a>
+      </div>
+      <div class="box6" onmouseover="change6()" onmouseout="revert6()">
+        <p class="number">6</p>
+        <a href="mailto:"></a>
+        <p class="el">Bk</p>
+        <p class="name">B.D.N Kavya<br><span class="position">Joint Secretary|CheA</span></p>
+
+      </div>
+      <div class="box7" onmouseover="change7()" onmouseout="revert7()">
+        <p class="number">7</p>
+        <a href="mailto:"></a>
+        <p class="el">Ks</p>
+        <p class="name">Krupa Sreyasi<br><span class="position">Joint Secretary|CheA</span></p>
+      </div>
+      <div class="box8" onmouseover="change8()" onmouseout="revert8()">
+        <p class="number">8</p>
+        <a href="mailto:"></a>
+        <p class="el">Vn</p>
+        <p class="name">V.N Priyanka<br><span class="position">Joint Secretary|CheA</span></p>
+      </div>
+      <div class="box9" onmouseover="change9()" onmouseout="revert9()">
+        <p class="number">9</p>
+        <a href="mailto:"></a>
+          <p class="el">Ty</p>
+        <p class="name">Tanmayi Yerremshetti<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box10" onmouseover="change10()" onmouseout="revert10()">
+        <p class="number">10</p>
+
+          <p class="el">Ka</p>
+        <a href="mailto:kumarabhishek22101997@gmail.com"><p class="name">Kumar Abhishek<br><span class="position">Web Developer|CheA</span></p></a>
+      </div>
+      <div class="box11" onmouseover="change11()" onmouseout="revert11()">
+        <p class="number">11</p>
+        <a href="mailto:"></a>
+        <p class="el">Vg</p>
+        <p class="name">V.Gyaneshwar Sharma<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box12" onmouseover="change12()" onmouseout="revert12()">
+        <p class="number">12</p>
+        <a href="mailto:"></a>
+        <p class="el">Av</p>
+        <p class="name">Alekya Vutukuri<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box13" onmouseover="change13()" onmouseout="revert13()">
+        <p class="number">13</p>
+        <a href="mailto:"></a>
+        <p class="el">Kn</p>
+        <p class="name">K. Nomaltha<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box14" onmouseover="change14()" onmouseout="revert14()">
+        <p class="number">14</p>
+        <a href="mailto:"></a>
+        <p class="el">Ks</p>
+        <p class="name">K. Sri Vaishnavi<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box15" onmouseover="change15()" onmouseout="revert15()">
+        <p class="number">15</p>
+        <a href="mailto:"></a>
+        <p class="el">Ar</p>
+        <p class="name">Adarsh Raj<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box16" onmouseover="change16()" onmouseout="revert16()">
+        <p class="number">16</p>
+        <a href="mailto:"></a>
+        <p class="el">Su</p>
+        <p class="name">Sumeet Upadhyay<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box17" onmouseover="change17()" onmouseout="revert17()">
+        <p class="number">17</p>
+        <a href="mailto:"></a>
+        <p class="el">Ah</p>
+        <p class="name">Asad Ahmed<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box18" onmouseover="change18()" onmouseout="revert18()">
+        <p class="number">18</p>
+        <a href="mailto:"></a>
+        <p class="el">Ik</p>
+        <p class="name">Irshad U Khan<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box19" onmouseover="change19()" onmouseout="revert19()">
+        <p class="number">19</p>
+        <a href="mailto:"></a>
+        <p class="el">Sh</p>
+        <p class="name">Shubhanshu Sharma<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box20" onmouseover="change20()" onmouseout="revert20()">
+        <p class="number">20</p>
+        <a href="mailto:"></a>
+        <p class="el">Gd</p>
+        <p class="name">Ganjana S. Dattarao<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="box21" onmouseover="change21()" onmouseout="revert21()">
+        <p class="number">21</p>
+        <a href="mailto:"></a>
+        <p class="el">Gs</p>
+        <p class="name">Garvit Soni<br><span class="position">Executive Member|CheA</span></p>
+      </div>
+      <div class="header3">
+        <h2>IIche Team</h2>
+      </div>
+      <div class="box22" onmouseover="change22()" onmouseout="revert22()">
+        <p class="number">1</p>
+        <p class="el">Pr</p>
+        <a href="mailto:"><p class="name">Pranav<br><span class="position">Secretary|IIche</span></p></a>
+      </div>
+      <div class="box23" onmouseover="change23()" onmouseout="revert23()">
+        <p class="number">2</p>
+
+        <p class="el">Ab</p>
+          <a href="mailto:"><p class="name">Apurva Bhardawaj<br><span class="position">Joint Secretary|IIche</span></p></a>
+      </div>
+      <div class="box24" onmouseover="change24()" onmouseout="revert24()">
+        <p class="number">3</p>
+
+        <p class="el">Sk</p>
+          <a href="mailto:"><p class="name">Sajal Kumar<br><span class="position">Treasurer|IIche</span></p></a>
+      </div>
+      <div class="box25" onmouseover="change25()" onmouseout="revert25()">
+        <p class="number">4</p>
+
+        <p class="el">Rs</p>
+          <a href="mailto:"><p class="name">Ramchandruni Sai Sree<br><span class="position">Executive Member|IIche</span></p></a>
+      </div>
+      <div class="box26" onmouseover="change26()" onmouseout="revert26()">
+        <p class="number">5</p>
+
+        <p class="el">Vg</p>
+          <a href="mailto:"><p class="name">Vaibhav Goyal<br><span class="position">Executive Member|IIche</span></p></a>
+      </div>
+      <div class="box27" onmouseover="change27()" onmouseout="revert27()">
+        <p class="number">6</p>
+        <p class="el">Sj</p>
+          <a href="mailto:"><p class="name">Shreyans Jain<br><span class="position">Executive Member|IIche</span></p></a>
+      </div>
+      <div class="foot">
+        <p>Chemical Engineering Department</p>
+        <p>National Institute of Technology, Warangal</p>
+        <p>&copy;&ensp;Kumar Abhishek & Shreyans Jain</p>
+      </div>
+      <div class="page">
+        <p>7.</p>
+      </div>
+    </div>
+
+      <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
+      <script src="{% static 'js/jquery.hoverpanels.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/team.js' %}"></script>
+  </body>
+
+</html>
